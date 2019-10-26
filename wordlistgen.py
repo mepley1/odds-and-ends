@@ -34,6 +34,3 @@ for newentry in range(numofpwds):
 file1.close()
 
 print('Finished')
-
-# using input to keep cmd window from closing
-# input()
