@@ -1,4 +1,4 @@
-# psychic-succotash
+
 Random Python things
 
-wordlistgen.py - Generate .txt wordlists of specified length
+wordlistgen.py - Generates randomized .txt wordlists of specified length and word length
