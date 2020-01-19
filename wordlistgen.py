@@ -1,3 +1,5 @@
+#!/usr/bin/env Python3
+
 # wordlist generator
 # python 3
 
