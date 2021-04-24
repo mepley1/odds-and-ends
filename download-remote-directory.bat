@@ -1,0 +1,1 @@
+scp -r -i "C:\Users\username\.ssh\id_rsa" user@host:"/home/pathto/remotedir" "E:\pathto\localdir"
