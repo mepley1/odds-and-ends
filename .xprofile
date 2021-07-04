@@ -1,3 +1,4 @@
 #!/bin/bash
 #to adjust for overscan on hdmi TV - adjust borders accordingly
+#change HDMI-1 to name of display used
 xrandr --output HDMI-1 --set underscan on --set "underscan vborder" 30 --set "underscan hborder" 30
