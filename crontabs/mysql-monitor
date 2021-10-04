@@ -1,0 +1,3 @@
+# monitor mysql, restart if not running, then log with timestamp.
+# run in root's crontab
+*/10 * * * * systemctl is-active --quiet mysql || (date +"%T mysql is down, restarting..." >> mysql-restart-log.txt && systemctl restart mysql)
