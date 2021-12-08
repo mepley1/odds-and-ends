@@ -2,12 +2,14 @@
 Odds and ends
 ------------------------------------
 
-/templates - Template files for /home/templates on an Ubuntu desktop
+/win11 - Tweaks for Windows 11 to make it a little less counterproductive
 
-add-ultimate-performance-win10.bat - Add 'Ultimate Performance' power plan to Win10 if it's not there
+/templates - Blank/template files for /home/templates on an Ubuntu desktop
 
-run-py-script.bat - Run a Python script
+add-ultimate-performance-win10.bat - Add 'Ultimate Performance' power plan to Win10 editions that don't have it
 
-wordlistgen.py - Generates randomized .txt wordlists of specified length and string length
+run-py-script.bat - Python script launcher
+
+wordlistgen.py - Generates randomized .txt wordlists of specified size and string length
 
 .xprofile - Ubuntu adjust for overscan on a TV
