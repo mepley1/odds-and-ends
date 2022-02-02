@@ -5,4 +5,5 @@
 | `repadmin /replsummary` | Replication summary. Identifies domain controllers that are failing inbound replication or outbound replication, and summarizes the results in a report. |
 | `repadmin /showrepl` | Displays the replication status when the specified domain controller last attempted to perform inbound replication of Active Directory partitions. |
 | `netdom query fsmo` | List FSMO roles |
-| `get-aduser -identity $USERNAME -properties *` | List all properties of AD user ex. get-aduser -identity bob |
+| `get-aduser -identity myUsername -properties *` | List all properties of AD user ex. get-aduser -identity bob |
+| `az vm open-port --port 443 --resource-group myResourceGroup --name myVM` | Open a port on a VM |
