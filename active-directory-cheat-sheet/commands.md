@@ -1,6 +1,6 @@
 # Active Directory Powershell cheat sheet
 
-In progress- this sheet is not organized in any meaningful way.
+Work in progress - this sheet is not organized in any meaningful way.
 
 | Command | Description
 | --- | --- |
