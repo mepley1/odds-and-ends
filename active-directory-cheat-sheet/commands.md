@@ -15,4 +15,4 @@
 | `netsh interface ipv4 add dnsserver name=$Idx address=10.0.0.30 index=1` | Set DNS servers. Repeat with index=2 etc. for multiple servers |
 | `Get-WindowsFeature \| Where-Object {$_. installstate -eq "installed"} \| Format-List Name,Installstate` | List all installed Roles & Features. Might want to pipe output to `more` or a file because it can be a long list. |
 | `Get-WindowsFeature -ComputerName dc01 \| Where-Object {$_. installstate -eq "installed"} \| Format-List Name,Installstate \| more` | Same as above, but for remote host. |
-| `Restart-Computer -ComputerName Server01, Server02 -Credential Domain01\User01` | Restart remote machine. See [Microsoft Docs for Restart-Computer](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7.2) |
+| `Restart-Computer -ComputerName Server01, Server02 -Credential Domain01\User01` | Restart remote machine. Will prompt for password of specified user. See [Microsoft Docs for Restart-Computer](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7.2) |
