@@ -1,5 +1,7 @@
 # Active Directory Powershell cheat sheet
 
+In progress- this sheet is not organized in any meaningful way.
+
 | Command | Description
 | --- | --- |
 | `repadmin /replsummary` | Replication summary. Identifies domain controllers that are failing inbound replication or outbound replication, and summarizes the results in a report. |
