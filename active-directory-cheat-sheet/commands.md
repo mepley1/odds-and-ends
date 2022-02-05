@@ -13,5 +13,5 @@
 | `netsh interface ipv4 show interfaces` | List IPv4 network interfaces |
 | `netsh interface ipv4 set address name=$Idx source=static address=10.0.1.10 mask=255.255.255.0 gateway=10.0.0.1` | Set IPv4 address for network interface. Can use Index or full interface name. Idx of adapter can be found in previous command. If DHCP then source=DHCP |
 | `netsh interface ipv4 add dnsserver name=$Idx address=10.0.0.30 index=1` | Set DNS servers. Repeat with index=2 etc. for multiple servers |
-| ```Get-WindowsFeature | Where-Object {$_. installstate -eq "installed"} | Format-List Name,Installstate``` | List all installed Roles & Features. Might want to pipe output to `more` or a file because it can be a long list. |
+|   `Get-WindowsFeature | Where-Object {$_. installstate -eq "installed"} | Format-List Name,Installstate` | List all installed Roles & Features. Might want to pipe output to `more` or a file because it can be a long list. |
 | `Get-WindowsFeature -ComputerName dc01 | Where-Object {$_. installstate -eq "installed"} | Format-List Name,Installstate | more` | Same as above, but for remote host. |
