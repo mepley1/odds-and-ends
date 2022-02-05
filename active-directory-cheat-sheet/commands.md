@@ -8,3 +8,4 @@
 | `get-aduser -identity myUsername -properties *` | List all properties of AD user ex. get-aduser -identity bob |
 | `az vm open-port --port 443 --resource-group myResourceGroup --name myVM` | Open a port on an Azure VM |
 | `netdom renamecomputer localhost /NewName:myNewName` | Rename computer |
+| `netsh interface ipv4 show interfaces` | List IPv4 network interfaces |
