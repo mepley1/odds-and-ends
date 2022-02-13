@@ -20,3 +20,4 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Restart-Computer -ComputerName Server01, Server02 -Credential Domain01\User01` | Restart remote machine. Will prompt for password of specified user. See [Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7.2) |
 | `Enter-PSSession -ComputerName Server01 -Credential Domain01\User1` | Start Powershell session with remote machine. End session with `Exit-PSSession`. [Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-7.2) |
 | `Install-WindowsFeature FS-FileServer, FS-DFS-Namespace, FS-DFS-Replication -IncludeManagementTools` | Install **DFS Namespaces** and **DFS Replication** roles |
+| `hostname` or `echo %COMPUTERNAME%` | Display hostname |
