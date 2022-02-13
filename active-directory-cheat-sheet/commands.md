@@ -1,4 +1,4 @@
-# Active Directory Powershell cheat sheet
+# Active Directory & Windows Server *Powershell cheat sheet*
 
 Work in progress - this sheet is not organized in any meaningful way.
 
