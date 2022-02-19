@@ -22,3 +22,6 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Install-WindowsFeature FS-FileServer, FS-DFS-Namespace, FS-DFS-Replication -IncludeManagementTools` | Install **DFS Namespaces** and **DFS Replication** roles |
 | `hostname` or `echo %COMPUTERNAME%` | Display hostname |
 | `netsh advfirewall show allprofiles` | Show firewall profiles. Also see [Use netsh advfirewall firewall context](https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/netsh-advfirewall-firewall-control-firewall-behavior) |
+
+
+Note: Powershell treats output as objects, not strings like Bash.
