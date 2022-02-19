@@ -21,3 +21,4 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Enter-PSSession -ComputerName Server01 -Credential Domain01\User1` | Start Powershell session with remote machine. End session with `Exit-PSSession`. [Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-7.2) |
 | `Install-WindowsFeature FS-FileServer, FS-DFS-Namespace, FS-DFS-Replication -IncludeManagementTools` | Install **DFS Namespaces** and **DFS Replication** roles |
 | `hostname` or `echo %COMPUTERNAME%` | Display hostname |
+| `netsh advfirewall show allprofiles` | Show firewall profiles. Also see [Use netsh advfirewall firewall context](https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/netsh-advfirewall-firewall-control-firewall-behavior) |
