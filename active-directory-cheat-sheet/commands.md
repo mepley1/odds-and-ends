@@ -22,6 +22,6 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Install-WindowsFeature FS-FileServer, FS-DFS-Namespace, FS-DFS-Replication -IncludeManagementTools` | Install **DFS Namespaces** and **DFS Replication** roles |
 | `hostname` or `echo %COMPUTERNAME%` | Display hostname |
 | `netsh advfirewall show allprofiles` | Show firewall profiles. Also see [Use netsh advfirewall firewall context](https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/netsh-advfirewall-firewall-control-firewall-behavior) |
-| `Enable-PSremoting -force` | Enable Powershell remoting. See also [Use Windows PowerShell to remotely administer a server](https://docs.microsoft.com/en-us/learn/modules/describe-windows-server-administration-tools/6-use-windows-powershell-to-remotely-administer-server) |
+| `Enable-PSremoting -force` | Enable Powershell remoting. Will generate an error if using Public network profile; use `-force` to bypass. See also [Use Windows PowerShell to remotely administer a server](https://docs.microsoft.com/en-us/learn/modules/describe-windows-server-administration-tools/6-use-windows-powershell-to-remotely-administer-server) |
 
 Note: Powershell treats output as objects, not strings like Bash.
