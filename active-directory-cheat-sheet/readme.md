@@ -24,6 +24,7 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `netsh advfirewall show allprofiles` | Show firewall profiles. Also see [Use netsh advfirewall firewall context](https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/netsh-advfirewall-firewall-control-firewall-behavior) |
 | `Enable-PSremoting -force` | Enable Powershell remoting. Will generate an error if using Public network profile; use `-force` to bypass. See also [Use Windows PowerShell to remotely administer a server](https://docs.microsoft.com/en-us/learn/modules/describe-windows-server-administration-tools/6-use-windows-powershell-to-remotely-administer-server) |
 | `Invoke-Command -ComputerName SEA-DC1, SEA-SVR1 –FilePath C:\Test\Sample.ps1` | Run a local script on remote machines |
+| `Get-DhcpServerv4ScopeStatistics` | Gets the IPv4 scope statistics corresponding to the IPv4 scope identifiers specified for a DHCP server service. |
 
 
 Note: Powershell treats output as objects, not strings like Bash.
