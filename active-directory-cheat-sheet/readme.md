@@ -25,7 +25,7 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Enable-PSremoting -force` | Enable Powershell remoting. Will generate an error if using Public network profile; use `-force` to bypass. See also [Use Windows PowerShell to remotely administer a server](https://docs.microsoft.com/en-us/learn/modules/describe-windows-server-administration-tools/6-use-windows-powershell-to-remotely-administer-server) |
 | `Invoke-Command -ComputerName SEA-DC1, SEA-SVR1 –FilePath C:\Test\Sample.ps1` | Run a local script on remote machines |
 | `Get-DhcpServerv4ScopeStatistics` | Gets the IPv4 scope statistics (incl. # of free and in-use addresses) corresponding to the IPv4 scope identifiers specified for a DHCP server service. |
-| `Install-WindowsFeature IPAM -IncludeManagementTools` | Install IPAM server feature |
-
+| `Install-WindowsFeature IPAM -IncludeManagementTools` | Install IPAM server feature. You still must provision the IPAM servers and create GPOs for IPAM access. GPOs can be created with the following command. |
+| `Invoke-IpamGpoProvisioning -domain domain1.com -GpoPrefixName IPAM -IpamServerFqdn server1.domain1.com` | Create access GPOs for IPAM. GPO prefix must match the one specified in IPAM provisioning wizard. Generally you want to enter Y at the prompts. |
 
 Note: Powershell treats output as objects, not strings like others.
