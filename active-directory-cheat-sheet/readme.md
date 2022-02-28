@@ -27,5 +27,7 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Get-DhcpServerv4ScopeStatistics` | Gets the IPv4 scope statistics (incl. # of free and in-use addresses) corresponding to the IPv4 scope identifiers specified for a DHCP server service. |
 | `Install-WindowsFeature IPAM -IncludeManagementTools` | Install IPAM server feature. You still must provision the IPAM servers and create GPOs for IPAM access. GPOs can be created with the following command. |
 | `Invoke-IpamGpoProvisioning -domain domain1.com -GpoPrefixName IPAM -IpamServerFqdn server1.domain1.com` | Create access GPOs for IPAM. GPO prefix must match the one specified in IPAM provisioning wizard. Generally you want to enter Y at the prompts. |
+| `disable-windowsoptionalfeature -online -featurename smb1protocol` | Disable SMB 1.0 if it has been enabled. |
+
 
 Note: Powershell treats output as objects, not strings like others.
