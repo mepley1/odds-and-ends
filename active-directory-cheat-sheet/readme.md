@@ -28,6 +28,6 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Install-WindowsFeature IPAM -IncludeManagementTools` | Install IPAM server feature. You still must provision the IPAM servers and create GPOs for IPAM access. GPOs can be created with the following command. |
 | `Invoke-IpamGpoProvisioning -domain domain1.com -GpoPrefixName IPAM -IpamServerFqdn server1.domain1.com` | Create access GPOs for IPAM. GPO prefix must match the one specified in IPAM provisioning wizard. Generally you want to enter Y at the prompts. |
 | `disable-windowsoptionalfeature -online -featurename smb1protocol` | Disable SMB 1.0 if it has been enabled. |
-
+| `Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicy" -Action IGNORE -FQDN "EQ,*.contoso.com" -PassThru` | Block DNS queries for a domain. See [Docs](https://learn.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=windowsserver2022-ps) and [DNS Policies Overview](https://learn.microsoft.com/en-us/windows-server/networking/dns/deploy/dns-policies-overview). Also see [DnsServer](https://learn.microsoft.com/en-us/powershell/module/dnsserver/?view=windowsserver2022-ps) |
 
 Note: Powershell treats output as objects, not strings like others.
