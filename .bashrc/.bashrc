@@ -1,2 +1,2 @@
 # add these to my .bashrc
-alias ls='ls -al'
+alias ls='ls -alF'
