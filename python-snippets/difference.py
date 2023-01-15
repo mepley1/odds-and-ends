@@ -7,5 +7,4 @@ def difference(a, b):
     comparison = set_a.difference(set_b)
     return list(comparison)
 
-
 difference([1,2,3], [1,2,4]) # [3]
