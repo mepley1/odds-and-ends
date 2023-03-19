@@ -36,6 +36,6 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Get-WindowsUpdate -KBArticleID KB2267602, KB4533002 -Install` | Install specific updates by KB # |
 | `Install-WindowsUpdate -NotCategory "Drivers" -NotTitle OneDrive -NotKBArticleID KB4011670 -AcceptAll -IgnoreReboot` | Exclude certain updates |
 | `Get-WUJob -ComputerName $ServerNames` | Check status of update jobs |
-| `"server1","server2" | Get-WUHistory| Where-Object {$_.Title -match "KB4011634"} | Select-Object *|ft` | Check for a specific update's installation status |
+| `"server1","server2" \| Get-WUHistory \| Where-Object {$_.Title -match "KB4011634"} \| Select-Object * \| ft` | Check for a specific update's installation status |
 
 Note: Powershell treats output as objects, not strings like others.
