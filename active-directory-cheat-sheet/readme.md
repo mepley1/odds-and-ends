@@ -29,11 +29,13 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Invoke-IpamGpoProvisioning -domain domain1.com -GpoPrefixName IPAM -IpamServerFqdn server1.domain1.com` | Create access GPOs for IPAM. GPO prefix must match the one specified in IPAM provisioning wizard. Generally you want to enter Y at the prompts. |
 | `disable-windowsoptionalfeature -online -featurename smb1protocol` | Disable SMB 1.0 if it has been enabled. |
 | `Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicy" -Action IGNORE -FQDN "EQ,*.contoso.com" -PassThru` | Ignore DNS queries for a domain. See [Docs](https://learn.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=windowsserver2022-ps) and [DNS Policies Overview](https://learn.microsoft.com/en-us/windows-server/networking/dns/deploy/dns-policies-overview). Also see [DnsServer](https://learn.microsoft.com/en-us/powershell/module/dnsserver/?view=windowsserver2022-ps) |
-| *Windows Update cmdlets* | 
+| ## Windows Update cmdlets | 
+| `Install-Module -Name PSWindowsUpdate` | Install Windows Update module from PSGallery |
 | `Get-WindowsUpdate` or `Get-WUList` | List available updates |
 | `Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot` | Download & install all available updates and reboot if needed |
 | `Get-WindowsUpdate -KBArticleID KB2267602, KB4533002 -Install` | Install specific updates by KB # |
 | `Install-WindowsUpdate -NotCategory "Drivers" -NotTitle OneDrive -NotKBArticleID KB4011670 -AcceptAll -IgnoreReboot` | Exclude certain updates |
-
+| `Get-WUJob -ComputerName $ServerNames` | Check status of update jobs |
+| `"server1","server2" | Get-WUHistory| Where-Object {$_.Title -match "KB4011634"} | Select-Object *|ft` | Check for a specific update's installation status |
 
 Note: Powershell treats output as objects, not strings like others.
