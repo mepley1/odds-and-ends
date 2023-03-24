@@ -1,6 +1,8 @@
 
 Odds and ends
 ------------------------------------
+/active-directory-cheat-sheet - A Windows Server / A.D. admin cheat sheet
+
 /crontabs - Stuff to run as cron jobs
 
 /win11 - Tweaks for Windows 11
