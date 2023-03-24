@@ -2,7 +2,7 @@
 Odds and ends
 ------------------------------------
 
-/win11 - Tweaks for Windows 11 to make it a little less counterproductive
+/win11 - Tweaks for Windows 11
 
 /templates - Blank/template files for /home/templates on an Ubuntu desktop
 
