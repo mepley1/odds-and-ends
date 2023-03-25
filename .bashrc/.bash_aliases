@@ -1,2 +1,2 @@
 # Just because I prefer this over plain ls
-alias ll='ls -alF'
+alias ll='ls -alhF'
