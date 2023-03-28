@@ -37,5 +37,7 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Install-WindowsUpdate -NotCategory "Drivers" -NotTitle OneDrive -NotKBArticleID KB4011670 -AcceptAll -IgnoreReboot` | Exclude certain updates |
 | `Get-WUJob -ComputerName $ServerNames` | Check status of update jobs |
 | `"server1","server2" \| Get-WUHistory \| Where-Object {$_.Title -match "KB4011634"} \| Select-Object * \| ft` | Check for a specific update's installation status |
+| `cipher /E` | Encrypt each file in a dir |
+| `netsh wlan show profile "wifi1" key=clear` | Show wlan profiles incl. cleartext passphrase |
 
 Note: Powershell treats output as objects, not strings like others.
