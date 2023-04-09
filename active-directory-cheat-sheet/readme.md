@@ -40,5 +40,6 @@ Work in progress - this sheet is not organized in any meaningful way.
 |  **Miscellaneous** |
 | `cipher /E` | Encrypt each file+dir within current working dir |
 | `netsh wlan show profile "wifi1" key=clear` | Show wlan profiles incl. cleartext passphrase |
+|  `net start <ServiceName>` and `net stop <ServiceName>` |  Start/stop a service |
 
 Note: Powershell treats output as objects, not strings like others.
