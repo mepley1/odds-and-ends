@@ -38,9 +38,9 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `Get-WUJob -ComputerName $ServerNames` | Check status of update jobs |
 | `"server1","server2" \| Get-WUHistory \| Where-Object {$_.Title -match "KB4011634"} \| Select-Object * \| ft` | Check for a specific update's installation status |
 |  **Miscellaneous** |
-| `cipher /E` | Encrypt each file+dir within current working dir |
+| `cipher /E` | Encrypt each file+dir within current working dir. [Docs](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cipher) |
 | `netsh wlan show profile "wifi1" key=clear` | Show wlan profiles incl. cleartext passphrase |
 |  `net start <ServiceName>` and `net stop <ServiceName>` |  Start/stop a service |
 | `Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"` | Allow an application to access folders. [Docs](https://learn.microsoft.com/en-us/powershell/module/defender/add-mppreference?view=windowsserver2022-ps&viewFallbackFrom=win10-ps) |
 
-Note: Powershell treats output as objects, not strings like others.
+Note: Powershell treats output as objects, not strings like other languages.
