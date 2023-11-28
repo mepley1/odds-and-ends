@@ -8,13 +8,14 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `repadmin /showrepl` | Displays the replication status when the specified domain controller last attempted to perform inbound replication of Active Directory partitions. |
 | `netdom query fsmo` | List FSMO roles |
 | `get-aduser -identity myUsername -properties *` | List all properties of AD user ex. get-aduser -identity bob |
+| `get-adcomputer -filter * -properties ipv4address, ipv6address \| format-list name, ipv4*, ipv6*` | List computers in domain, with IPv4 + IPv6 addresses. |
 | `az vm open-port --port 443 --resource-group myResourceGroup --name myVM` | Open a port on an Azure VM |
 | `netdom renamecomputer localhost /NewName:myNewName` | Rename computer using netdom. |
 | `Rename-Computer -NewName "Server044" -DomainCredential Domain01\Admin01 -Restart` | Rename computer, using specified credential, and restart. Will prompt for Admin01 password. |
 | `Rename-Computer -ComputerName "Srv01" -NewName "Server001" -DomainCredential Domain01\Admin01 -Force` | Rename remote computer, skip confirmation. See [Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-7.2) |
 | `netsh interface ipv4 show interfaces` | List IPv4 network interfaces |
 | `netsh interface ipv4 set address name=$Idx source=static address=10.0.1.10 mask=255.255.255.0 gateway=10.0.0.1` | Set IPv4 address for network interface. Can use Index or full interface name. Idx of adapter can be found in previous command. If DHCP then `source=DHCP` |
-| `netsh interface ipv4 add dnsserver name=$Idx address=10.0.0.30 index=1` | Set DNS servers. Repeat with index=2 etc. for multiple servers |
+| `netsh interface ipv4 add dnsserver name=$Idx address=10.0.0.30 index=1` | Set DNS resolvers for an interface. Repeat with index=2 etc. to use multiple resolvers. |
 | `Get-WindowsFeature \| Where-Object {$_. installstate -eq "installed"} \| Format-List Name,Installstate` | List all installed Roles & Features. Might want to pipe output to `more` or a text file if server has lots of Roles & Features installed because it can be a long list. |
 | `Get-WindowsFeature -ComputerName dc01 \| Where-Object {$_. installstate -eq "installed"} \| Format-List Name,Installstate \| more` | Same as above, but for remote host. |
 | `Restart-Computer -ComputerName Server01, Server02 -Credential Domain01\User01` | Restart remote machine. Will prompt for password of specified user. See [Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7.2) |
