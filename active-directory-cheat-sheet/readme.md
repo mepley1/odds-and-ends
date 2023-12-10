@@ -40,8 +40,11 @@ Work in progress - this sheet is not organized in any meaningful way.
 | `"server1","server2" \| Get-WUHistory \| Where-Object {$_.Title -match "KB4011634"} \| Select-Object * \| ft` | Check for a specific update's installation status |
 |  **Miscellaneous** |
 | `cipher /E` | Encrypt each file+dir within current working dir. [Docs](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cipher) |
-| `netsh wlan show profile "wifi1" key=clear` | Show wlan profiles incl. cleartext passphrase |
+| `netsh wlan show profile "wifi1" key=clear` | Show wlan profile incl. cleartext passphrase |
 |  `net start <ServiceName>` and `net stop <ServiceName>` |  Start/stop a service |
 | `Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"` | Allow an application to access folders. [Docs](https://learn.microsoft.com/en-us/powershell/module/defender/add-mppreference?view=windowsserver2022-ps&viewFallbackFrom=win10-ps) |
+| `fsutil fsinfo drives` | List mounted drives |
+| `get-psdrive -psprovider filesystem` | List drives, incl. used + free space |
+| `wmic logicaldisk get name,volumename,filesystem,size,description` | List drives incl. network mounts, along with some info |
 
-Note: Powershell treats output as objects, not strings like other languages.
+Note: Powershell output are objects, not strings like other shells
