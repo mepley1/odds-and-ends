@@ -1,20 +1,21 @@
 # Just because I prefer this over plain ls
-alias ll="lsd -alFh --color=auto"
+alias ll="lsd -alFh"
 
-# colors
-alias ip='ip -color=auto'
-alias grep='grep --color=auto'
-
-# zig
+# Zig
 alias zb="zig build"
 alias zbr="zig build -Doptimize=ReleaseSafe"
+alias zt="zig test src/main.zig"
 
-# python virtual envs
+# Python virtual envs
 alias ve="python3 -m venv ./venv"
 alias vv="source ./venv/bin/activate"
 
-# flask
+# Flask
 alias fr="flask run"
 
-# misc
+# Misc
 alias myip="curl https://ip.mepley.net; echo"
+
+# Use colored output where supported
+alias ip="ip -color=auto"
+alias grep="grep --color=auto"
