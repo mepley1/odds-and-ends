@@ -11,7 +11,7 @@ alias ve="python3 -m venv ./venv"
 alias vv="source ./venv/bin/activate"
 
 # Flask
-alias fr="flask run"
+alias fr="flask run --host=0.0.0.0"
 
 # Misc
 alias myip="curl https://ip.mepley.net; echo"
